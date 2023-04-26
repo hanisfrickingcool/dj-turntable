@@ -195,6 +195,10 @@ div#slider figure {
     animation-duration: 1s
 }
 
+.fronttext a{
+  color:white;
+}
+
 @-webkit-keyframes animate {
   from {opacity:0 }
   to {opacity:1 }
@@ -283,8 +287,20 @@ object-fit:cover;
   grid-area:asi1;
 }
 
+.art1 a{
+  color:white;
+}
+
 .art2 {
   grid-area:asi2;
+}
+
+.art2 a {
+  color:white;
+}
+
+.art3 a{
+  color:white;
 }
 
 .art3 {
@@ -305,6 +321,10 @@ object-fit:cover;
   font-size:1.3em;
   text-align:center;
   padding:5px;
+}
+
+.media a {
+  color:white;
 }
 
 h2 a{
