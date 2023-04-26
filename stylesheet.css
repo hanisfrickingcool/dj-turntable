@@ -1,0 +1,649 @@
+/** {
+  border:2px dashed white;
+}
+*/
+@media (prefers-reduced-motion: reduce) {
+  * {
+      animation: none !important;
+      transition: none !important;
+      }
+}
+
+html {
+    height:100%;
+}
+
+
+@font-face {
+  font-family:"starwars";
+  src: url(STJEDISE.TTF);
+}
+
+img {
+  max-width:100%;
+}
+
+body{
+  background-color:black;
+  margin:0;
+}
+
+.text {
+  font-family:arial;
+  font-size:120%;
+  color:white;
+  text-align:center;
+  border:#d4de56 dotted 5px;
+  padding:5px;
+}
+
+.text a{
+  color:white;
+}
+
+nav {
+    background-color:black;
+    font-family:starwars;
+    font-size:120%;
+    grid-area:nav;
+    text-align:center;
+    padding:.5em 0;
+    /*These next 4 lines make it stick at the top*/
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+    z-index:999;
+}
+
+.zero {
+    grid-area:zero;
+    display:none;
+    animation:logo 0.5s;
+}
+
+@keyframes logo{
+  0% {
+    opacity:0;
+    transform: translatey(-1em);
+  }
+  100% {
+    opacity:1;
+    transform:translatey(0);
+  }
+}
+
+.zero img {
+  width:70%;
+  margin:0;
+  padding:0;
+}
+
+.first {
+    grid-area:first;
+}
+
+.second {
+    grid-area:second;
+}
+
+.third {
+    grid-area:third;
+}
+
+.fourth {
+    grid-area:fourth;
+}
+
+.fifth {
+    grid-area:fifth;
+}
+
+.sixth {
+  grid-area:sixth;
+}
+
+.seventh {
+  grid-area:seventh;
+}
+
+.eighth {
+  grid-area:eighth;
+}
+
+header {
+  grid-area:header;
+  max-width:100vw;
+}
+
+header p {
+  color:white;
+  text-align:center;
+  font-family:starwars;
+  border-bottom:#d4de56 dotted 5px;
+  border-top:#d4de56 dotted 5px;
+  position:relative;
+  padding:0px;
+  margin:0px;
+  font-size:180%;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.logo{
+  grid-area:headerpic;
+  padding:5px;
+  height:10vmax;
+  
+}
+
+/*Slideshow*/
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+65% { left: -200%; }
+70% { left: -300%; }
+85% { left: -300%; }
+100% { left: -400%; }
+}
+
+
+div#slider { overflow: hidden;}
+div#slider figure img {
+  width: 20%;
+  
+  }
+div#slider figure {
+  position: relative;
+  z-index:1;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite;
+}
+
+.fronttext {
+    z-index:2;
+    color:white;
+    font-size:5vw;
+    text-align:center;
+    width:100%;
+    font-family:starwars;
+    text-shadow:
+    -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000,
+    -2px 0 0 #000000,
+    2px 0 0 #000000,
+    0 2px 0 #000000,
+    0 -2px 0 #000000;
+    position: absolute;
+    -webkit-animation-name: animate;
+      -webkit-animation-duration: 1s;
+    animation-name: animate;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animate {
+  from {opacity:0 }
+  to {opacity:1 }
+}
+
+@keyframes animate {
+  from{opacity:0 }
+  to{opacity:1 }
+}
+
+main {
+  grid-area:main;
+}
+
+figure p {
+  color:white;
+  font-family:arial;
+  text-align:center;
+}
+
+.nestedgrid3 a {
+  color:white;
+  text-align:center;
+  padding:5px;
+  font-size:2em;
+}
+
+ul {
+  color:white;
+  
+}
+
+.list1 {
+  grid-area:list1;
+}
+
+.list2 {
+  grid-area:list2;
+}
+
+.div1 {
+  grid-area:div1;
+}
+
+.div2 {
+  grid-area:div2;
+}
+
+.div3 {
+  grid-area:div3;
+}
+
+form {
+  margin:auto;
+  color:white;
+  padding:10px;
+  text-align:center;
+}
+
+video {
+width:480px;
+max-width:100%;
+min-height:270px;
+margin:0px;
+padding:0px;
+border:#d4de56 dotted 5px;
+}
+
+.video{
+grid-area:video;
+}
+
+.audio1{
+grid-area:audio1;
+}
+
+.audio2{
+  grid-area:audio2;
+}
+
+ video[poster]{
+object-fit:cover;
+}
+
+.art1{
+  grid-area:asi1;
+}
+
+.art2 {
+  grid-area:asi2;
+}
+
+.art3 {
+  grid-area:asi3;
+}
+
+.reviews {
+  color:white;
+  font-family:Arial;
+  font-size:1.3em;
+  text-align:center;
+  padding:5px;
+}
+
+.nestedgrid4{
+  color:white;
+  font-family:Arial;
+  font-size:1.3em;
+  text-align:center;
+  padding:5px;
+}
+
+h2 a{
+  color:white;
+}
+
+.reviews a{
+  color:white;
+}
+
+article {
+  color:white;
+  font-family:Arial;
+  padding:5px;
+  margin:10px 5px 5px 10px;
+}
+
+article i {
+  font-size:1.25em;
+}
+
+main h2 {
+  color:white;
+  text-align:center;
+  font-family:Arial;
+}
+
+.heading1 {
+  grid-area:heading1;
+}
+
+.heading2 {
+  grid-area:heading2;
+}
+
+.gallery img{
+  max-width:100%;
+  max-height:auto;
+}
+
+.ph1{
+  grid-area:photo1;
+}
+
+.ph2{
+  grid-area:photo2;
+}
+
+.ph3{
+  grid-area:photo3;
+}
+
+.ph4{
+  grid-area:photo4;
+}
+
+.ph5{
+  grid-area:photo5;
+}
+
+.ph6{
+  grid-area:photo6;
+}
+
+footer {
+  grid-area:footer;
+  text-align:center;
+  color:white;
+  font-family:Arial;
+  padding:5px;
+}
+
+footer p{
+  font-size:1em;
+  margin:0;
+}
+
+
+/*---------------------------Mobile Layout----------------------------*/
+.container1 { /*for index.html*/
+  display: grid;
+  grid-template-columns:1fr;
+  grid-gap:.5em;
+  width:100vw;
+  grid-template-areas:
+    "nav"
+    "header"
+    "main"
+    "footer";
+    }
+    
+/*This stuff is for the hamburger menu*/
+.toggleNav {
+    display:grid; /*This is what allows the hamburger icon and "Menu" to display*/
+    }
+
+#flex-nav ul {
+    display: none; /*jQuery toggles the nav from to this class to the .open when clicked*/
+    text-align:center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+ 
+#flex-nav ul.open { /*.open is the class that gets toggled when clicked (with help from the jQuery code)*/
+    display:grid;
+    }
+    
+#flex-nav li {
+    padding-left:10px;
+    
+    }
+
+#flex-nav a {
+    color:white;
+    text-decoration:none;
+    }
+
+#flex-nav a:hover {
+    color:#729a30;
+    }
+#navwrapper { /*This will be the mobile layout AND the TABLET given the number of options, with each option stacking vertically after the word menu is clicked; you will need to add six, seven, and maybe eight*/
+    display:grid;
+    
+    grid-template-areas:
+    "first"
+    "second"
+    "third"
+    "fourth"
+    "fifth"
+    "sixth"
+    "seventh"
+    "eighth";
+    }
+
+    .media {
+      display:grid;
+      grid-template-areas:
+      "audio1"
+      "audio2"
+      "video";
+      text-align:center;
+    }
+    
+    aside{
+    display:grid;
+    text-align:center;
+    color:white;
+    grid-template-areas:
+    "asi1"
+    "asi2"
+    "asi3";
+    padding-top:20px;
+    font-family:arial;
+    }
+    
+  .nestedgrid2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-areas:
+  "div1 div1"
+  "div2 div2"
+  "div3 div3";
+}
+
+  .nestedgrid3{
+  display:grid;
+  grid-template-areas:
+  "list1"
+  "list2";
+  background-color:#222222;
+  }
+  
+  .gallery {
+    display:grid;
+    grid-template-areas:
+    "photo1"
+    "photo2"
+    "photo3"
+    "photo4"
+    "photo5"
+    "photo6";
+  }
+  .nestedgrid4 {
+    display:grid;
+    grid-template-areas:
+    "heading1"
+    "heading2";
+  }
+    
+/*-----------------------Tablet Media Query------------------------*/
+@media only screen and (min-width: 480px)  {
+  .container1 {
+    display: grid;
+    grid-template-columns:auto 1fr;
+    grid-gap:.5em;
+    grid-template-areas:
+    "nav nav"
+    "header header"
+    "main main"
+    "footer footer";
+  }
+  #navwrapper { /*This will be the mobile layout AND the TABLET given the number of options, with each option stacking vertically after the word menu is clicked; you will need to add six, seven, and maybe eight*/
+    display:grid;
+    grid-template-areas:
+    "first"
+    "second"
+    "third"
+    "fourth"
+    "fifth"
+    "sixth"
+    "seventh"
+    "eighth";
+    }
+    
+    .media {
+    display:grid
+    grid-template-areas:
+    "audio1"
+    "audio2"
+    "video";
+    text-align:center;
+    }
+    
+    aside {
+    display:grid;
+    text-align:center;
+    color:white;
+    grid-template-areas:
+    "asi1"
+    "asi2"
+    "asi3";
+    padding-top:20px;
+    font-family:arial;
+    }
+    
+  .nestedgrid2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-areas:
+  "div1 div1"
+  "div2 div2"
+  "div3 div3";
+}
+  .nestedgrid3{
+    display:grid;
+    grid-template-areas:
+    "list1 list2";
+    background-color:#222222;
+  }
+  
+  .gallery {
+    display:grid;
+    grid-template-areas:
+    "photo1 photo2"
+    "photo3 photo4"
+    "photo5 photo6";
+  }
+  .nestedgrid4{
+    display:grid;
+    grid-template-areas:
+    "heading1 heading2";
+  }
+}
+    
+/*---------------------------Desktop Layout----------------------------*/
+@media only screen and (min-width: 960px)  {
+  .container1 {
+    display: grid;
+    grid-template-columns:auto 1fr;
+    grid-gap:.5em;
+   grid-template-areas:
+    "nav"
+    "header"
+    "main"
+    "footer";
+  }
+  #navwrapper {
+    display:grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "zero first second third fourth fifth sixth seventh eighth";
+    }
+    
+.toggleNav {
+    display: none; /*Makes the hamburger icon with the word "Menu" to disappear at this screen size*/
+  }
+  
+#flex-nav ul {
+    display:grid;
+    text-align:center;
+  }
+
+#flex-nav li {
+    padding-top:10px;
+    }
+    .zero {
+    display:grid;
+  }
+  
+.media {
+    display:grid;
+    grid-template-areas:
+    "audio1 video"
+    "audio2 video";
+    text-align:center;
+    }
+    
+  aside {
+    display:grid;
+    text-align:center;
+    color:white;
+    grid-template-areas:
+    "asi1 asi2 asi3";
+    padding-top:20px;
+    font-family:arial;
+  }
+    .nestedgrid2{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "div1 div2"
+    "div3 div3";
+  }
+  
+  .nestedgrid3 {
+    display:grid;
+    grid-template-areas:
+    "list1 list2";
+    background-color:#222222;
+  }
+  
+  .gallery {
+    display:grid;
+    grid-template-areas:
+    "photo1 photo2 photo3"
+    "photo4 photo5 photo6";
+  }
+  .nestedgrid4{
+    "heading1 heading2";
+  }
+}
